@@ -13,8 +13,11 @@
         protected string Correo;
         public abstract string getcorreo();
     }
-
-    public class cliente : Persona
+    public interface Mensaje
+    {
+        void SendMessage();
+    }
+    public class cliente : Persona, Mensaje 
     {   
         public cliente(int id, string nombre,int edad)
         {
@@ -26,6 +29,11 @@
         {
             return "cliente";
 
+        }
+
+        public void SendMessage()
+        {
+            //enviar mensaje
         }
     }
 

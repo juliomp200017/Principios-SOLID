@@ -50,7 +50,7 @@
         }
     }
 
-    public class Accion : Juego
+    public class Accion : Juego, Mensaje
     {
         public string Id { get; set; }
 
@@ -62,6 +62,11 @@
         public decimal getprice()
         {
             return Price * Invoice;
+        }
+
+        public void SendMessage()
+        {
+            //enviar mensaje
         }
     }
 
